@@ -9,11 +9,11 @@
 
     <TextView
         android:id="@+id/appName"
-        style="@style/textStyle"
+        style="@style/TextStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/app_name"
-        android:textSize="96sp"
+        android:textSize="@dimen/_96sdp"
         app:layout_constraintBottom_toTopOf="@id/discoverButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,7 +21,7 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/discoverButton"
-        style="@style/buttonStyle"
+        style="@style/ButtonStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/button_text"
@@ -32,7 +32,7 @@
 
     <TextView
         android:id="@+id/loginText"
-        style="@style/textStyle"
+        style="@style/TextStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/login_text"

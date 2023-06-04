@@ -9,24 +9,24 @@
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="344sp"
+        android:layout_width="@dimen/_344sdp"
         android:layout_height="wrap_content"
         android:background="@drawable/linear_layout"
         android:orientation="vertical"
-        android:padding="24dp"
+        android:padding="@dimen/_24sdp"
         app:layout_constraintBottom_toTopOf="@id/logInButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            style="@style/textStyle"
+            style="@style/TextStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginBottom="32sp"
+            android:layout_marginBottom="@dimen/_32sdp"
             android:text="@string/log_in_text"
-            android:textSize="28sp" />
+            android:textSize="@dimen/_28sdp" />
 
         <com.google.android.material.textfield.TextInputEditText
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -39,14 +39,14 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24sp"
+            android:layout_marginTop="@dimen/_24sdp"
             android:background="@drawable/shape_edit_text"
             android:hint="@string/password" />
     </LinearLayout>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/logInButton"
-        style="@style/buttonStyle"
+        style="@style/ButtonStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/log_in_text"
@@ -57,7 +57,7 @@
 
     <TextView
         android:id="@+id/signupText"
-        style="@style/textStyle"
+        style="@style/TextStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/return_to_sign_up"
