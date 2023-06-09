@@ -9,21 +9,21 @@
 
     <TextView
         android:id="@+id/skipText"
-        style="@style/textStyle"
+        style="@style/TextStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="16dp"
+        android:padding="@dimen/_16sdp"
         android:text="@string/skip_text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/appName"
-        style="@style/textStyle"
+        style="@style/TextStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/app_name"
-        android:textSize="32sp"
+        android:textSize="@dimen/_32sdp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/skipText" />
@@ -40,8 +40,8 @@
 
     <TextView
         android:id="@+id/onboardingText"
-        style="@style/textStyle"
-        android:layout_width="253dp"
+        style="@style/TextStyle"
+        android:layout_width="@dimen/_254sdp"
         android:layout_height="wrap_content"
         android:text="@string/info_text"
         app:layout_constraintBottom_toBottomOf="parent"
