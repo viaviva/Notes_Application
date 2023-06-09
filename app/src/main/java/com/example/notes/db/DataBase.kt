@@ -6,7 +6,7 @@ import com.example.notes.Subscriber
 object DataBase {
 
     private val listOfNotes: ArrayList<Note> =
-        arrayListOf(Note("Kyle Wilson", "Awesome job!", "20/06/2023"))
+        arrayListOf(Note("Kyle Wilson", "Awesome job!", 1417601730000))
 
     private val listOfSubscribers = arrayListOf<Subscriber>()
 

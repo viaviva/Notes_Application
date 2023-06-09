@@ -6,7 +6,7 @@
         <item name="android:textColor">@color/black</item>
         <item name="android:fontFamily">@font/red_hat_display_medium</item>
         <item name="android:gravity">center</item>
-        <item name="android:textSize">18sp</item>
+        <item name="android:textSize">@dimen/sdp_18</item>
         <item name="android:textAllCaps">false</item>
     </style>
 
@@ -15,7 +15,7 @@
         <item name="android:textColor">@color/black</item>
         <item name="android:fontFamily">@font/red_hat_display_black</item>
         <item name="android:gravity">center</item>
-        <item name="android:textSize">20sp</item>
+        <item name="android:textSize">@dimen/sdp_20</item>
         <item name="android:textAllCaps">false</item>
     </style>
 
@@ -24,8 +24,8 @@
         <item name="android:textColor">@color/black</item>
         <item name="android:fontFamily">@font/red_hat_display_bold</item>
         <item name="android:gravity">center</item>
-        <item name="android:textSize">20sp</item>
-        <item name="android:layout_marginBottom">8sp</item>
+        <item name="android:textSize">@dimen/sdp_20</item>
+        <item name="android:layout_marginBottom">@dimen/sdp_8</item>
         <item name="android:textAllCaps">false</item>
     </style>
 
@@ -34,22 +34,22 @@
         <item name="android:textColor">@color/white</item>
         <item name="android:fontFamily">@font/red_hat_display_medium</item>
         <item name="android:gravity">center</item>
-        <item name="android:textSize">18sp</item>
+        <item name="android:textSize">@dimen/sdp_18</item>
     </style>
 
     <style name="ButtonStyle">
         <item name="android:textColor">@color/white</item>
         <item name="android:fontFamily">@font/red_hat_display_medium</item>
         <item name="android:gravity">center</item>
-        <item name="android:textSize">18sp</item>
+        <item name="android:textSize">@dimen/sdp_18</item>
         <item name="android:textAllCaps">false</item>
         <item name="android:background">@drawable/shape_button</item>
     </style>
 
     <style name="RecyclerViewItemStyle">
         <item name="android:background">@color/main_color</item>
-        <item name="android:paddingTop">28dp</item>
-        <item name="android:paddingHorizontal">16dp</item>
+        <item name="android:paddingTop">@dimen/sdp_28</item>
+        <item name="android:paddingHorizontal">@dimen/sdp_16</item>
         <item name="android:paddingBottom">10dp</item>
     </style>
 
@@ -57,7 +57,19 @@
         <item name="android:layout_width">fill_parent</item>
         <item name="android:textColor">@color/note_text_color</item>
         <item name="android:fontFamily">@font/public_sans_regular</item>
-        <item name="android:textSize">16sp</item>
+        <item name="android:textSize">@dimen/sdp_16</item>
         <item name="android:textAllCaps">false</item>
     </style>
+
+    <style name="deleteButton">
+        <item name="android:layout_width">@dimen/sdp_138</item>
+        <item name="android:layout_height">@dimen/sdp_38</item>
+        <item name="android:fontFamily">@font/public_sans_medium</item>
+        <item name="android:textSize">@dimen/sdp_16</item>
+        <item name="backgroundTint">@color/edittext_color</item>
+        <item name="android:padding">@dimen/sdp_0</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:layout_marginTop">@dimen/sdp_20</item>
+    </style>
+
 </resources>

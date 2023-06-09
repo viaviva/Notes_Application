@@ -3,7 +3,9 @@
     <string name="button_text">Discover the platform</string>
     <string name="login_text">You have an account ? Log-in</string>
     <string name="skip_text">Skip</string>
-    <string name="info_text">Find projects from companies everywhere in the word</string>
+    <string name="first_onboarding_info_text">Find projects from companies everywhere in the word</string>
+    <string name="second_onboarding_info_text">Work hard and level up!</string>
+    <string name="third_onboarding_info_text">Enjoy your progess!</string>
     <string name="sign_up_text">Sign-up</string>
     <string name="log_in_text">Log-in</string>
     <string name="first_name">First name</string>
@@ -18,4 +20,10 @@
     <string name="title">Title</string>
     <string name="message">Message</string>
     <string name="note_saved">Note saved</string>
+    <string name="search">Search</string>
+    <string name="home">Home</string>
+    <string name="profile">Profile</string>
+    <string name="logout">Logout</string>
+    <string name="delete_all_notes">Delete all notes</string>
+    <string name="delete_profile">Delete profile</string>
 </resources>

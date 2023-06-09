@@ -9,10 +9,10 @@
         style="@style/TextStyleNewTitles"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/_18sdp"
-        android:layout_marginTop="@dimen/_26sdp"
+        android:layout_marginStart="@dimen/sdp_18"
+        android:layout_marginTop="@dimen/sdp_26"
         android:text="@string/all_notes"
-        android:textSize="@dimen/_40sdp" />
+        android:textSize="@dimen/sdp_40" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewNotes"
@@ -20,12 +20,4 @@
         android:layout_height="0dp"
         android:layout_weight="1" />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/addButton"
-        style="@style/ButtonStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="@dimen/_60sdp"
-        android:text="@string/add" />
 </LinearLayout>
