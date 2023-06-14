@@ -6,4 +6,6 @@
     <color name="button_color">#9378FF</color>
     <color name="main_color">#E5E5E5</color>
     <color name="note_text_color">#99879D</color>
+    <color name="inactive_icon_color">#299378FF</color>
+    <color name="delete_button_color">#FBEAFF</color>
 </resources>

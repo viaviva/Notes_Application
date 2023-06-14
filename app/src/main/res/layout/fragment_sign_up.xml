@@ -5,16 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bubbles"
-    tools:context=".SignUpActivity">
+    tools:context=".ui.SignUpFragment">
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="@dimen/_344sdp"
+        android:layout_width="@dimen/sdp_344"
         android:layout_height="wrap_content"
         android:background="@drawable/linear_layout"
         android:orientation="vertical"
-        android:padding="@dimen/_24sdp"
-        app:layout_constraintBottom_toTopOf="@id/logInButton"
+        android:padding="@dimen/sdp_24"
+        app:layout_constraintBottom_toTopOf="@id/signUpButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -24,14 +24,30 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginBottom="@dimen/_32sdp"
-            android:text="@string/log_in_text"
-            android:textSize="@dimen/_28sdp" />
+            android:layout_marginBottom="@dimen/sdp_32"
+            android:text="@string/sign_up_text"
+            android:textSize="@dimen/sdp_28" />
 
         <com.google.android.material.textfield.TextInputEditText
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/shape_edit_text"
+            android:hint="@string/first_name" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/sdp_24"
+            android:background="@drawable/shape_edit_text"
+            android:hint="@string/last_name" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/sdp_24"
             android:background="@drawable/shape_edit_text"
             android:hint="@string/email" />
 
@@ -39,30 +55,31 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_24sdp"
+            android:layout_marginTop="@dimen/sdp_24"
             android:background="@drawable/shape_edit_text"
             android:hint="@string/password" />
     </LinearLayout>
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/logInButton"
+        android:id="@+id/signUpButton"
         style="@style/ButtonStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/log_in_text"
-        app:layout_constraintBottom_toTopOf="@id/signupText"
+        android:text="@string/sign_up_text"
+        app:layout_constraintBottom_toTopOf="@id/loginText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/linearLayout" />
 
     <TextView
-        android:id="@+id/signupText"
+        android:id="@+id/loginText"
         style="@style/TextStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/return_to_sign_up"
+        android:text="@string/login_text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/logInButton" />
+        app:layout_constraintTop_toTopOf="@id/signUpButton" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
