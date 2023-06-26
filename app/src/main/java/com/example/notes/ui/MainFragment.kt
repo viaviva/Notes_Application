@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.notes.R
 import com.example.notes.databinding.FragmentMainBinding
+import com.example.notes.ui.logIn.LogInFragment
 import com.example.notes.ui.onboarding.OnboardingFragment
 import com.example.notes.util.replaceFragment
 

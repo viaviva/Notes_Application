@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.notes.R
 import com.example.notes.databinding.FragmentOnboardingBinding
-import com.example.notes.ui.SignUpFragment
+import com.example.notes.ui.signUp.SignUpFragment
 import com.example.notes.util.replaceFragment
 
 class OnboardingFragment : Fragment() {

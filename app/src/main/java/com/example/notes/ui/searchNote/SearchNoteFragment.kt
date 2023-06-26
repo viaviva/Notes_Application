@@ -11,7 +11,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.notes.databinding.FragmentSearchNoteBinding
 import com.example.notes.model.Note
 import com.example.notes.ui.allNotes.adapter.NoteAdapter
-import com.example.notes.util.getText
 
 class SearchNoteFragment : Fragment() {
 
@@ -38,7 +37,7 @@ class SearchNoteFragment : Fragment() {
 
             binding.searchInputEditText.addTextChangedListener(
                 afterTextChanged = {
-                    getListOfNotes(binding.searchInputLayout.getText())
+                    getListOfNotes(binding.searchInputEditText.text.toString())
                 }
             )
         }

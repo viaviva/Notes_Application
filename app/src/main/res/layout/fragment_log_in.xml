@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bubbles"
-    tools:context=".ui.SignUpFragment">
+    tools:context=".ui.signUp.SignUpFragment">
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -28,20 +28,34 @@
             android:text="@string/log_in_text"
             android:textSize="@dimen/sdp_28" />
 
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/emailTextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/email">
+
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/emailInputEditText"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/shape_edit_text"
-            android:hint="@string/email" />
+            android:background="@drawable/shape_edit_text" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputEditText
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/passwordTextInputLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/sdp_24"
-            android:background="@drawable/shape_edit_text"
-            android:hint="@string/password" />
+            android:hint="@string/password">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/passwordInputEditText"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_edit_text"/>
+        </com.google.android.material.textfield.TextInputLayout>
     </LinearLayout>
 
     <androidx.appcompat.widget.AppCompatButton
