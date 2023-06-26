@@ -1,11 +1,12 @@
-package com.example.notes.adapter
+package com.example.notes.ui.allNotes.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
-import com.example.notes.Note
+import com.example.notes.model.Note
 import com.example.notes.R
+import com.example.notes.databinding.ItemNoteBinding
 
 class NoteAdapter : ListAdapter<Note, NoteViewHolder>(
     object : DiffUtil.ItemCallback<Note>() {
@@ -21,7 +22,7 @@ class NoteAdapter : ListAdapter<Note, NoteViewHolder>(
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NoteViewHolder {
         return NoteViewHolder(
-            LayoutInflater.from(parent.context).inflate(R.layout.item_note, parent, false)
+            ItemNoteBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         )
     }
 

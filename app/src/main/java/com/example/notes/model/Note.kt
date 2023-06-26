@@ -1,4 +1,4 @@
-package com.example.notes
+package com.example.notes.model
 
 data class Note(
     var title: String,

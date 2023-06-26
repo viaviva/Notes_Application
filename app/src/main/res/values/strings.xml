@@ -26,4 +26,5 @@
     <string name="logout">Logout</string>
     <string name="delete_all_notes">Delete all notes</string>
     <string name="delete_profile">Delete profile</string>
+    <string name="title_invalid">Start with lowercase letter</string>
 </resources>

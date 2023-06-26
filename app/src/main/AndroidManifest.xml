@@ -13,24 +13,6 @@
         android:theme="@style/Theme.Notes"
         tools:targetApi="31">
         <activity
-            android:name=".ui.LogInFragment"
-            android:exported="false" />
-        <activity
-            android:name=".ui.SignUpFragment"
-            android:exported="false" />
-        <activity
-            android:name=".ui.AllNotesFragment"
-            android:exported="false" />
-        <activity
-            android:name=".ui.AddNoteFragment"
-            android:exported="false" />
-        <activity
-            android:name=".ui.SearchNoteFragment"
-            android:exported="false" />
-        <activity
-            android:name=".ui.onboarding.OnboardingFragment"
-            android:exported="false" />
-        <activity
             android:name=".ui.MainActivity"
             android:exported="true">
             <intent-filter>

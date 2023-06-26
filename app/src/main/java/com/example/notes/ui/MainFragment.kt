@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import com.example.notes.R
 import com.example.notes.databinding.FragmentMainBinding
 import com.example.notes.ui.onboarding.OnboardingFragment
+import com.example.notes.util.replaceFragment
 
 class MainFragment : Fragment() {
 
@@ -26,15 +27,11 @@ class MainFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.discoverButton.setOnClickListener {
-            parentFragmentManager.beginTransaction()
-                .replace(R.id.main_container, OnboardingFragment())
-                .commit()
+            parentFragmentManager.replaceFragment(R.id.main_container, OnboardingFragment())
         }
 
         binding.loginText.setOnClickListener {
-            parentFragmentManager.beginTransaction()
-                .replace(R.id.main_container, LogInFragment())
-                .commit()
+            parentFragmentManager.replaceFragment(R.id.main_container, LogInFragment())
         }
     }
 }

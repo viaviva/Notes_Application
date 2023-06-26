@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.notes.R
 import com.example.notes.databinding.FragmentSignUpBinding
+import com.example.notes.util.replaceFragment
 
 class SignUpFragment : Fragment() {
 
@@ -25,15 +26,11 @@ class SignUpFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.loginText.setOnClickListener {
-            parentFragmentManager.beginTransaction()
-                .replace(R.id.main_container, LogInFragment())
-                .commit()
+            parentFragmentManager.replaceFragment(R.id.main_container, LogInFragment())
         }
 
         binding.signUpButton.setOnClickListener {
-            parentFragmentManager.beginTransaction()
-                .replace(R.id.main_container, HomeFragment())
-                .commit()
+            parentFragmentManager.replaceFragment(R.id.main_container, HomeFragment())
         }
     }
 }
