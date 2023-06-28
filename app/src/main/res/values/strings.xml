@@ -27,4 +27,6 @@
     <string name="delete_all_notes">Delete all notes</string>
     <string name="delete_profile">Delete profile</string>
     <string name="title_invalid">Start with lowercase letter</string>
+    <string name="user_invalid">Incorrect email or password</string>
+    <string name="email_exist">Email exist</string>
 </resources>

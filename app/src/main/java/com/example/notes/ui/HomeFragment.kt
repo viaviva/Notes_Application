@@ -9,6 +9,7 @@ import com.example.notes.R
 import com.example.notes.databinding.FragmentHomeBinding
 import com.example.notes.ui.addNote.AddNoteFragment
 import com.example.notes.ui.allNotes.AllNotesFragment
+import com.example.notes.ui.profile.ProfileFragment
 import com.example.notes.ui.searchNote.SearchNoteFragment
 
 class HomeFragment : Fragment() {
