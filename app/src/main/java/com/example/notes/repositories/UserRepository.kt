@@ -1,20 +1,12 @@
 package com.example.notes.repositories
 
 import com.example.notes.db.DataBase
-import com.example.notes.entity.UserEntity
 import com.example.notes.model.User
+import com.example.notes.util.toUserEntity
 
 class UserRepository {
 
-    fun addUser(user: User) = DataBase.userDao?.insertUser(
-        UserEntity(
-            0,
-            user.firstName,
-            user.lastName,
-            user.email,
-            user.password
-        )
-    )
+    fun addUser(user: User) = DataBase.userDao?.insertUser(user.toUserEntity())
 
     fun getUser(email: String, password: String): Boolean {
         return DataBase.userDao?.getUser(email, password) == null

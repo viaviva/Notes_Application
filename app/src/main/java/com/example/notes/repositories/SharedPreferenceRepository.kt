@@ -23,17 +23,17 @@ object SharedPreferenceRepository {
         userPreferences = context.getSharedPreferences(USER_PREF_FILE, Context.MODE_PRIVATE)
     }
 
-    fun setIsFirstOpen(isFirstOpen: Boolean) {
+    fun setIsFirstOpen() {
         sharedPreferences?.edit {
-            putBoolean(IS_FIRST_OPEN, isFirstOpen)
+            putBoolean(IS_FIRST_OPEN, true)
         }
     }
 
     fun getIsFirstOpen(): Boolean = sharedPreferences?.getBoolean(IS_FIRST_OPEN, false) ?: false
 
-    fun setIsUserLogIn(isUserLogIn: Boolean) {
+    fun setIsUserLogIn() {
         userPreferences?.edit {
-            putBoolean(IS_USER_LOG_IN, isUserLogIn)
+            putBoolean(IS_USER_LOG_IN, true)
         }
     }
 

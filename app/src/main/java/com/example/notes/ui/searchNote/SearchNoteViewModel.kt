@@ -19,4 +19,5 @@ class SearchNoteViewModel : ViewModel() {
             listOfNotes.value = listOf()
         }
     }
+
 }

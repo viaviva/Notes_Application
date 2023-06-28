@@ -16,10 +16,10 @@ interface NoteDao {
     @Delete
     fun deleteNote(note: NoteEntity)
 
-    @Query("SELECT * FROM note")
-    fun getAllNotes(): List<NoteEntity>
+    @Query("SELECT * FROM note WHERE user_email = :email")
+    fun getAllNotes(email: String): List<NoteEntity>
 
-    @Query("SELECT * FROM note WHERE title LIKE :value OR message LIKE :value")
-    fun searchNotes(value: String): List<NoteEntity>
+    @Query("SELECT * FROM note WHERE user_email = :email AND (title LIKE :value OR message LIKE :value)")
+    fun searchNotes(value: String, email: String): List<NoteEntity>
 
 }

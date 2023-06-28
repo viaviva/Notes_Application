@@ -53,7 +53,7 @@ class LogInFragment : Fragment() {
                 requireContext().getString(R.string.user_invalid)
         } else {
             SharedPreferenceRepository.run {
-                setIsUserLogIn(true)
+                setIsUserLogIn()
                 setUserEmail(email)
             }
             parentFragmentManager.replaceFragment(R.id.main_container, HomeFragment())

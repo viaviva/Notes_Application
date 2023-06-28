@@ -54,7 +54,7 @@ class SignUpFragment : Fragment() {
         }
 
         SharedPreferenceRepository.run {
-            setIsUserLogIn(true)
+            setIsUserLogIn()
             setUserEmail(binding.emailInputEditText.text.toString())
         }
     }
@@ -68,4 +68,5 @@ class SignUpFragment : Fragment() {
             parentFragmentManager.replaceFragment(R.id.main_container, HomeFragment())
         }
     }
+
 }

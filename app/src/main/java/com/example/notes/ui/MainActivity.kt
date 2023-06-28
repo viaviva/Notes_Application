@@ -8,6 +8,7 @@ import com.example.notes.ui.logIn.LogInFragment
 import com.example.notes.util.replaceFragment
 
 class MainActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -21,9 +22,10 @@ class MainActivity : AppCompatActivity() {
                     supportFragmentManager.replaceFragment(R.id.main_container, LogInFragment())
                 }
             } else {
-                setIsFirstOpen(true)
+                setIsFirstOpen()
                 supportFragmentManager.replaceFragment(R.id.main_container, MainFragment())
             }
         }
     }
+
 }

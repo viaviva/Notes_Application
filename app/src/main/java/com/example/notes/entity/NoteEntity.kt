@@ -2,9 +2,18 @@ package com.example.notes.entity
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
+import androidx.room.ForeignKey
 import androidx.room.PrimaryKey
 
-@Entity(tableName = "note")
+@Entity(
+    tableName = "note",
+    foreignKeys = [ForeignKey(
+        entity = UserEntity::class,
+        childColumns = ["user_email"],
+        parentColumns = ["email"]
+    )]
+)
+
 data class NoteEntity(
 
     @PrimaryKey(autoGenerate = true)
@@ -18,6 +27,8 @@ data class NoteEntity(
     val message: String,
 
     @ColumnInfo(name = "date")
-    val date: Long
+    val date: Long,
 
+    @ColumnInfo(name = "user_email")
+    val email: String
 )

@@ -1,38 +1,24 @@
 package com.example.notes.repositories
 
 import com.example.notes.db.DataBase
-import com.example.notes.entity.NoteEntity
 import com.example.notes.model.Note
+import com.example.notes.util.listToNote
+import com.example.notes.util.toNoteEntity
 
 class NoteRepository {
 
+    private val email = SharedPreferenceRepository.getUserEmail()
+
     fun getListOfNotes(): ArrayList<Note> {
-        return (DataBase.noteDao?.getAllNotes()?.map {
-            Note(
-                it.title,
-                it.message,
-                it.date
-            )
-        } as? ArrayList<Note>) ?: arrayListOf()
+        return (DataBase.noteDao?.getAllNotes(email)?.listToNote() as? ArrayList<Note>) ?: arrayListOf()
     }
 
     fun addNote(note: Note) = DataBase.noteDao?.insertNote(
-        NoteEntity(
-            0,
-            note.title,
-            note.message,
-            note.date
-        )
+        note.toNoteEntity(email)
     )
 
     fun searchNotes(value: String): ArrayList<Note> {
-        return DataBase.noteDao?.searchNotes(value)?.map {
-            Note(
-                it.title,
-                it.message,
-                it.date
-            )
-        } as ArrayList<Note>
+        return DataBase.noteDao?.searchNotes(value, email)?.listToNote() as ArrayList<Note>
     }
 
 }
