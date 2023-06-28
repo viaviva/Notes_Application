@@ -25,14 +25,14 @@ class NoteRepository {
         )
     )
 
-    fun get() = DataBase.listOfNotes.filter {
-        it.title.contains("a") or it.message.contains("a")
-    }.distinct()
-
-    fun searchNotes(value: String): List<Note> {
-        return DataBase.listOfNotes.filter {
-            it.title.contains(value)
-        }
+    fun searchNotes(value: String): ArrayList<Note> {
+        return DataBase.noteDao?.searchNotes(value)?.map {
+            Note(
+                it.title,
+                it.message,
+                it.date
+            )
+        } as ArrayList<Note>
     }
 
 }

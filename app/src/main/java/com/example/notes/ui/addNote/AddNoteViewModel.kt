@@ -8,5 +8,8 @@ class AddNoteViewModel : ViewModel() {
 
     private val noteRepository = NoteRepository()
 
-    fun addNote(note: Note) = noteRepository.addNote(note)
+    fun addNote(note: Note, onClick: Unit) {
+        noteRepository.addNote(note)
+        return onClick
+    }
 }

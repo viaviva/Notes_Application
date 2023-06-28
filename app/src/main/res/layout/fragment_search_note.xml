@@ -4,14 +4,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/main_color"
-    android:orientation="vertical"
-    android:paddingHorizontal="@dimen/sdp_18">
+    android:orientation="vertical">
 
     <TextView
         style="@style/TextStyleNewTitles"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/sdp_54"
+        android:paddingHorizontal="@dimen/sdp_18"
         android:text="@string/search"
         android:textSize="@dimen/sdp_40" />
 
@@ -20,6 +20,7 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/sdp_18"
         app:boxBackgroundColor="@color/white"
         app:boxStrokeColor="@color/edittext_color"
         app:endIconDrawable="@drawable/ic_search"
