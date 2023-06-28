@@ -44,7 +44,6 @@ class AddNoteFragment : Fragment() {
 
         binding.addNewButton.setOnClickListener {
             addNote()
-            Toast.makeText(requireContext(), R.string.note_saved, Toast.LENGTH_LONG).show()
             parentFragmentManager.popBackStack()
         }
     }
@@ -55,7 +54,8 @@ class AddNoteFragment : Fragment() {
                 binding.titleTextInputLayout.getText(),
                 binding.messageTextInputLayout.getText(),
                 Instant.now().toEpochMilli()
-            )
+            ),
+            Toast.makeText(requireContext(), R.string.note_saved, Toast.LENGTH_LONG).show()
         )
     }
 

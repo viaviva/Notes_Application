@@ -12,6 +12,11 @@ class SearchNoteViewModel : ViewModel() {
     private val noteRepository = NoteRepository()
 
     fun getListOfNotes(value: String) {
-        listOfNotes.value = noteRepository.searchNotes(value)
+        if (value.isNotEmpty()) {
+            listOfNotes.value = noteRepository.searchNotes("%$value%")
+        }
+        else {
+            listOfNotes.value = listOf()
+        }
     }
 }

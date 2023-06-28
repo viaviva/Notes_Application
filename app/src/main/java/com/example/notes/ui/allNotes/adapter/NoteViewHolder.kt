@@ -1,10 +1,7 @@
 package com.example.notes.ui.allNotes.adapter
 
-import android.view.View
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.example.notes.model.Note
-import com.example.notes.R
 import com.example.notes.databinding.ItemNoteBinding
 import com.example.notes.util.getDate
 import java.time.Instant

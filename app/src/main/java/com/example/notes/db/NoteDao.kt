@@ -19,4 +19,7 @@ interface NoteDao {
     @Query("SELECT * FROM note")
     fun getAllNotes(): List<NoteEntity>
 
+    @Query("SELECT * FROM note WHERE title LIKE :value OR message LIKE :value")
+    fun searchNotes(value: String): List<NoteEntity>
+
 }
