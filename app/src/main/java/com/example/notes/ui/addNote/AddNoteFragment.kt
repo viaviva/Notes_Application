@@ -14,8 +14,10 @@ import com.example.notes.databinding.FragmentAddNoteBinding
 import com.example.notes.util.getText
 import com.example.notes.validation.ValidationResult
 import com.example.notes.validation.titleValidation
+import dagger.hilt.android.AndroidEntryPoint
 import java.time.Instant
 
+@AndroidEntryPoint
 class AddNoteFragment : Fragment() {
 
     private lateinit var binding: FragmentAddNoteBinding
@@ -34,6 +36,20 @@ class AddNoteFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        viewModel.run {
+            noteSaved = {
+                binding.root.post {
+                    Toast.makeText(requireContext(), R.string.note_saved, Toast.LENGTH_LONG).show()
+                }
+            }
+
+            noteNotSaved = {
+                binding.root.post {
+                    Toast.makeText(requireContext(), R.string.note_not_saved, Toast.LENGTH_LONG)
+                        .show()
+                }
+            }
+        }
         binding.run {
             titleTextInputEditText.addTextChangedListener(
                 afterTextChanged = {
@@ -51,27 +67,27 @@ class AddNoteFragment : Fragment() {
     private fun addNote() {
         viewModel.addNote(
             Note(
+                0,
                 binding.titleTextInputLayout.getText(),
                 binding.messageTextInputLayout.getText(),
                 Instant.now().toEpochMilli()
-            ),
-            Toast.makeText(requireContext(), R.string.note_saved, Toast.LENGTH_LONG).show()
+            )
         )
     }
 
     private fun isTitleValidate(): Boolean {
-        val titleValidationResult = titleValidation(binding.titleTextInputLayout.getText())
 
-        when (titleValidationResult) {
+        return when (val titleValidationResult =
+            titleValidation(binding.titleTextInputLayout.getText())) {
             is ValidationResult.Invalid -> {
                 binding.titleTextInputLayout.error =
                     requireContext().getString(titleValidationResult.errorId)
-                return false
+                false
             }
 
             else -> {
                 binding.titleTextInputLayout.error = null
-                return true
+                true
             }
         }
     }

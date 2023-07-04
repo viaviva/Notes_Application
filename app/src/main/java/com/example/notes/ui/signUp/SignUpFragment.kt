@@ -13,12 +13,18 @@ import com.example.notes.repositories.SharedPreferenceRepository
 import com.example.notes.ui.HomeFragment
 import com.example.notes.ui.logIn.LogInFragment
 import com.example.notes.util.replaceFragment
+import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
+@AndroidEntryPoint
 class SignUpFragment : Fragment() {
 
     private lateinit var binding: FragmentSignUpBinding
 
     private val viewModel: SignUpViewModel by viewModels()
+
+    @Inject
+    lateinit var sharedPreferences: SharedPreferenceRepository
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -53,7 +59,7 @@ class SignUpFragment : Fragment() {
             )
         }
 
-        SharedPreferenceRepository.run {
+        sharedPreferences.run {
             setIsUserLogIn()
             setUserEmail(binding.emailInputEditText.text.toString())
         }

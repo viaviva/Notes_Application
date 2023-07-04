@@ -5,16 +5,18 @@ import com.example.notes.model.Note
 
 fun List<NoteEntity>.listToNote() = map {
     Note(
+        it.id,
         it.title,
         it.message,
         it.date
     )
 }
 
-fun Note.toNoteEntity(email: String) = NoteEntity(
-    0,
-    title,
-    message,
-    date,
-    email
-)
+fun Note.toNoteEntity(email: String) =
+    NoteEntity(
+        id,
+        title,
+        message,
+        date,
+        email
+    )
