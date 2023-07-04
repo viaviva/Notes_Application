@@ -1,32 +1,28 @@
 package com.example.notes.repositories
 
-import com.example.notes.db.DataBase
-import com.example.notes.entity.UserEntity
+import com.example.notes.db.UserDao
 import com.example.notes.model.User
+import com.example.notes.util.toUserEntity
+import javax.inject.Inject
 
-class UserRepository {
+class UserRepository @Inject constructor(
+    private val userDao: UserDao,
+    private val sharedPreferences: SharedPreferenceRepository
+) {
 
-    fun addUser(user: User) = DataBase.userDao?.insertUser(
-        UserEntity(
-            0,
-            user.firstName,
-            user.lastName,
-            user.email,
-            user.password
-        )
-    )
+    fun addUser(user: User) = userDao.insertUser(user.toUserEntity())
 
     fun getUser(email: String, password: String): Boolean {
-        return DataBase.userDao?.getUser(email, password) == null
+        return userDao.getUser(email, password) == null
     }
 
     fun getUserByEmail(email: String): Boolean {
-        return DataBase.userDao?.getUserByEmail(email) == null
+        return userDao.getUserByEmail(email) == null
     }
 
-    fun deleteUser(email: String) = DataBase.userDao?.run {
+    fun deleteUser() = userDao.run {
         deleteUser(
-            getUserByEmail(email)
+            getUserByEmail(sharedPreferences.getUserEmail())
         )
     }
 }

@@ -13,12 +13,18 @@ import com.example.notes.ui.HomeFragment
 import com.example.notes.ui.signUp.SignUpFragment
 import com.example.notes.util.getText
 import com.example.notes.util.replaceFragment
+import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
+@AndroidEntryPoint
 class LogInFragment : Fragment() {
 
     private lateinit var binding: FragmentLogInBinding
 
     private val viewModel: LogInViewModel by viewModels()
+
+    @Inject
+    lateinit var sharedPreferences: SharedPreferenceRepository
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -52,8 +58,8 @@ class LogInFragment : Fragment() {
             binding.emailTextInputLayout.error =
                 requireContext().getString(R.string.user_invalid)
         } else {
-            SharedPreferenceRepository.run {
-                setIsUserLogIn(true)
+            sharedPreferences.run {
+                setIsUserLogIn()
                 setUserEmail(email)
             }
             parentFragmentManager.replaceFragment(R.id.main_container, HomeFragment())

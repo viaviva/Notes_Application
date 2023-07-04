@@ -15,11 +15,18 @@
     <string name="return_to_sign_up">Return to Sign-up</string>
     <string name="all_notes">All Notes</string>
     <string name="add">Add</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="delete">Delete</string>
     <string name="add_note">Add note</string>
     <string name="back">Back</string>
     <string name="title">Title</string>
     <string name="message">Message</string>
     <string name="note_saved">Note saved</string>
+    <string name="note_not_saved">Note not saved</string>
+    <string name="all_notes_deleted">All notes deleted</string>
+    <string name="note_deleted">Note deleted</string>
+    <string name="note_not_deleted">Note not deleted</string>
     <string name="search">Search</string>
     <string name="home">Home</string>
     <string name="profile">Profile</string>
@@ -29,4 +36,5 @@
     <string name="title_invalid">Start with lowercase letter</string>
     <string name="user_invalid">Incorrect email or password</string>
     <string name="email_exist">Email exist</string>
+    <string name="delete_note">Delete note?</string>
 </resources>

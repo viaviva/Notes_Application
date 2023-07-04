@@ -11,7 +11,9 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.notes.databinding.FragmentSearchNoteBinding
 import com.example.notes.model.Note
 import com.example.notes.ui.allNotes.adapter.NoteAdapter
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class SearchNoteFragment : Fragment() {
 
     private lateinit var binding: FragmentSearchNoteBinding
